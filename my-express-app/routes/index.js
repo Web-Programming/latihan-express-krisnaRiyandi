@@ -23,6 +23,6 @@ router.post('/submit-contact', (req, res) => {
     console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
     
     // Redirect or send a response
-    res.render('thank-you', {title: 'Thank You', name : name}); 
+    res.render('thankyou', {title: 'Thank You', name : name}); 
 });
 module.exports = router;
