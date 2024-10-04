@@ -1,10 +1,164 @@
-<%- include('master', 
-{
-  title: title,
-  body: `
-  <h1>Order Detail</h1>
-  <p></p>
-  `
-})
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Order</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            padding: 40px;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .container:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .order-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+        .order-item strong {
+            color: #2980b9;
+        }
+        .order-item span {
+            display: block;
+            font-size: 1.1em;
+            margin-top: 5px;
+            color: #2c3e50;
+        }
+        .highlight {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .highlight span {
+            color: #ecf0f1;
+        }
+        .order-item:last-child {
+            margin-bottom: 0;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        button, .btn-home {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover, .btn-home:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
 
-%>
+<div class="container">
+    <h2>Detail Order Paket Wisata</h2>
+
+    <div class="order-item">
+        <strong>Nama Lengkap:</strong>
+        <span><%= orderData.nama %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Nomor Telepon:</strong>
+        <span><%= orderData.telepon %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Email:</strong>
+        <span><%= orderData.email %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Alamat:</strong>
+        <span><%= orderData.alamat %></span>
+    </div>
+
+    <div class="order-item highlight">
+        <strong>Paket Wisata yang Dipilih:</strong>
+        <span><%= orderData.paket %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Jumlah Peserta:</strong>
+        <span><%= orderData.jumlah %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Tanggal Keberangkatan:</strong>
+        <span><%= orderData.tanggal %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Durasi:</strong>
+        <span><%= orderData.durasi %> hari</span>
+    </div>
+
+    <div class="order-item">
+        <strong>Kota/Kawasan Tujuan:</strong>
+        <span><%= orderData.tujuan %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Panduan Wisata:</strong>
+        <span><%= orderData.panduan %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Permintaan Khusus:</strong>
+        <span><%= orderData.permintaan ? orderData.permintaan : 'Tidak ada' %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Transportasi Bandara:</strong>
+        <span><%= orderData.transportasi %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Akomodasi yang Diinginkan:</strong>
+        <span><%= orderData.akomodasi ? orderData.akomodasi : 'Tidak ada' %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Tipe Kamar:</strong>
+        <span><%= orderData.tipekamar %></span>
+    </div>
+
+    <div class="order-item">
+        <strong>Metode Pembayaran:</strong>
+        <span><%= orderData.pembayaran %></span>
+    </div>
+    <div class="button-container">
+      <a href="/" class="btn-home">Kembali ke Home</a>
+  </div>
+</div>
+
+</body>
+</html>

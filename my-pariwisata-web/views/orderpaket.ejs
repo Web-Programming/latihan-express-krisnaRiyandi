@@ -1,11 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-</head>
-<body>
-    
-</body>
-</html>
+<%- include('master', 
+{
+  title: title,
+  body: `
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <form action="/orderdetail" method="POST">
+        <h2>Form Order Paket Wisata</h2>
+        
+        <!-- Informasi Pribadi -->
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required>
+        
+        <label for="telepon">Nomor Telepon:</label>
+        <input type="text" id="telepon" name="telepon" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" name="alamat" rows="3" required></textarea>
+
+        <!-- Detail Paket Wisata -->
+        <label for="paket">Paket Wisata yang Dipilih:</label>
+        <select id="paket" name="paket" required>
+            <option value="">Pilih Paket</option>
+            <option value="paket1">Paket Wisata Punti Kayu</option>
+            <option value="paket2">Paket Wisata Ampera</option>
+            <option value="paket3">Paket Wisata Museum Balaputradewa</option>
+        </select>
+
+        <label for="jumlah">Jumlah Peserta:</label>
+        <input type="number" id="jumlah" name="jumlah" min="1" required>
+        
+        <label for="tanggal">Tanggal Keberangkatan:</label>
+        <input type="date" id="tanggal" name="tanggal" required>
+        
+        <label for="durasi">Durasi (Hari):</label>
+        <input type="number" id="durasi" name="durasi" min="1" required>
+
+        <label for="tujuan">Kota/Kawasan Tujuan:</label>
+        <input type="text" id="tujuan" name="tujuan" required>
+
+        <!-- Informasi Tambahan -->
+        <label for="panduan">Apakah Anda Memerlukan Panduan Wisata?</label>
+        <select id="panduan" name="panduan" required>
+            <option value="ya">Ya</option>
+            <option value="tidak">Tidak</option>
+        </select>
+
+        <label for="permintaan">Permintaan Khusus (jika ada):</label>
+        <textarea id="permintaan" name="permintaan" rows="3"></textarea>
+
+        <label for="transportasi">Apakah Anda Memerlukan Transportasi dari dan ke Bandara?</label>
+        <select id="transportasi" name="transportasi" required>
+            <option value="ya">Ya</option>
+            <option value="tidak">Tidak</option>
+        </select>
+
+        <label for="akomodasi">Akomodasi yang Diinginkan:</label>
+        <input type="text" id="akomodasi" name="akomodasi">
+
+        <label for="tipekamar">Tipe Kamar:</label>
+        <select id="tipekamar" name="tipekamar" required>
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+            <option value="triple">Triple</option>
+        </select>
+
+        <!-- Pembayaran -->
+        <label for="pembayaran">Metode Pembayaran:</label>
+        <select id="pembayaran" name="pembayaran" required>
+            <option value="transfer">Transfer Bank</option>
+            <option value="kartu">Kartu Kredit</option>
+            <option value="ewallet">E-Wallet</option>
+            <option value="tunai">Pembayaran Tunai di Lokasi</option>
+        </select>
+
+        <!-- Tombol Submit -->
+        <button type="submit">Submit</button>
+    </form>
+  `
+})
+
+%>

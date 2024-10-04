@@ -2,9 +2,32 @@
 {
   title: title,
   body: `
+  <style>
+    body {
+      background-image: url('/images/Jembatan-Ampera.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* Gambar tetap di tempat saat halaman di-scroll */
+      background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+      height: 100vh; /* Mengatur tinggi body menjadi 100% tinggi viewport */
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    p {
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5); 
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
   <h1>Selamat Datang di Website Pariwisata Palembang</h1>
   <p>Ini adalah halaman website official Pariwisata Palembang. Anda dapat memesan paket wisata pada Website ini. Selamat Menikmati Keindahan Wisata Palembang</p>
   `
 })
 
 %>
+
