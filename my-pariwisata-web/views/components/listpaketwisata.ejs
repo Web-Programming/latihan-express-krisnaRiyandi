@@ -1,0 +1,72 @@
+<style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #4CAF50;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #4CAF50;
+      }
+    </style>
+   <h1>Paket Wisata Palembang</h1>
+    <table border="1" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Paket</th>
+          <th>Durasi</th>
+          <th>Harga</th>
+          <th>Deskripsi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Paket Wisata Punti Kayu</td>
+          <td>1 Hari</td>
+          <td>IDR 1.000.000</td>
+          <td>Menjelajahi tempat wisata punti kayu di Palembang.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Paket Wisata Ampera</td>
+          <td>Setengah Hari</td>
+          <td>IDR 500.000</td>
+          <td>Menikmati setengah hari tur di beberapa tempat menarik.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Paket Wisata Museum Balaputradewa</td>
+          <td>1 Malam</td>
+          <td>IDR 800.000</td>
+          <td>Tur dengan pengalaman peninggalan-peninggalan di kota Palembang.</td>
+        </tr>
+      </tbody>
+    </table>
+<h1>Paket Wisata</h1>
+<div class="mt-4">
+    <% listpaketwisata.forEach(paket => { %>
+    <li>
+      <%= paket.nama %> : Rp <%= paket.harga %>
+    </li>
+  <% }) %>
+</div>
