@@ -26,5 +26,6 @@ const mahasiswaSchema = new mongoose.Schema({
 //create Model from Schema
 
 //mongoose.model("Mahasiswa", schemaMhs);
+// (namaModel, namaSchema)
 const Mahasiswa = mongoose.model("Mahasiswa", mahasiswaSchema);
 module.exports = Mahasiswa;
