@@ -19,5 +19,6 @@ import { RouterModule } from '@angular/router';
 })
 export class HousingLocationComponent {
   //mengisi data di home.component.ts
-  @Input() housingLocation! : HousingLocation;
+  @Input() housingLocation! : HousingLocation
+  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 }

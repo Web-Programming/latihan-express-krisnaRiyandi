@@ -15,4 +15,16 @@ const Index = async (req, res) => {
     
 };
 
-module.exports={Index };
+// Mengambil housing berdasarkan ID
+const getHousingById = async (req, res) => {
+  try {
+    const housing = await Housing.findById(req.params.id);
+    if (!housing) {
+      return res.status(404).json({ message: 'Housing tidak ditemukan' });
+    }
+    res.json(housing);
+  } catch (error) {
+    res.status(500).json({ message: 'Terjadi kesalahan saat mengambil data housing' });
+  }
+};
+module.exports={Index, getHousingById };
