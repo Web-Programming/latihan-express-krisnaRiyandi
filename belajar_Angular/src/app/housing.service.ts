@@ -37,8 +37,10 @@ export class HousingService {
     return await data.json() ?? [];
   }
   async getHousingLocationById(id: Number) : Promise<HousingLocation | undefined>{
-    const data = await fetch('${this.url}/${id}'); // contohnya http://localhost:3000/housing/1
-    return (await data.json()) ?? {};
+    const data = await fetch(`${this.url}/${id}`); // Gunakan backtick
+    //const data = await fetch('${this.url}/${id}'); // contohnya http://localhost:3000/housing/1
+    console.log(data);
+    return (await data.json()) ?? [];
   }
 
   submitApplication(firstName: String, lastName: String, email: String){

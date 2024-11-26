@@ -1,4 +1,4 @@
-import { Component, Inject, inject } from '@angular/core';
+import { Component, Inject, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HousingService } from '../housing.service';
@@ -46,7 +46,7 @@ export class DetailsComponent {
   //Menangkap housinglocation id
   housingLocationId = 0;
   housingService : HousingService = inject(HousingService);
-  housingLocation : HousingLocation | undefined 
+  housingLocation : HousingLocation | undefined
   applyForm: FormGroup = new FormGroup({
     firstname: new FormControl(''),
     lastname: new FormControl(''),
@@ -76,3 +76,5 @@ export class DetailsComponent {
 
   }
 }
+
+

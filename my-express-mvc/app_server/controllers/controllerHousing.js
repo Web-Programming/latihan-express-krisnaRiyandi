@@ -16,15 +16,29 @@ const Index = async (req, res) => {
 };
 
 // Mengambil housing berdasarkan ID
-const getHousingById = async (req, res) => {
+// const getHousingById = async (req, res) => {
+//   try {
+//     const housing = await Housing.findById(req.params.id);
+//     if (!housing) {
+//       return res.status(404).json({ message: 'Housing tidak ditemukan' });
+//     }
+//     res.json(housing);
+//   } catch (error) {
+//     res.status(500).json({ message: 'Terjadi kesalahan saat mengambil data housing' });
+//   }
+// };
+
+const IndexById = async (req, res) => {
   try {
-    const housing = await Housing.findById(req.params.id);
-    if (!housing) {
-      return res.status(404).json({ message: 'Housing tidak ditemukan' });
-    }
-    res.json(housing);
+      const id = parseInt(req.params.id); // Ambil ID dari parameter URL
+      const housingData = await Housing.findOne({ id: id }); // Cari data berdasarkan ID
+      if (housingData) {
+          res.json(housingData); // Kembalikan data jika ditemukan
+      } else {
+          res.status(404).json({ message: 'Data not found' });
+      }
   } catch (error) {
-    res.status(500).json({ message: 'Terjadi kesalahan saat mengambil data housing' });
+      res.status(500).json({ message: 'Error fetching data', error: error.message });
   }
 };
-module.exports={Index, getHousingById };
+module.exports={Index, IndexById};
