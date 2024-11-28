@@ -29,7 +29,6 @@ export class HousingService {
   //     laundry: true
   //   }
 //];
-
   constructor() { }
 
   async getAllHousingLocations(): Promise<HousingLocation[]>{
@@ -43,8 +42,40 @@ export class HousingService {
     return (await data.json()) ?? [];
   }
 
-  submitApplication(firstName: String, lastName: String, email: String){
-    console.log(firstName, lastName, email);
+  // submitApplication(firstName: String, lastName: String, email: String){
+  //   console.log(firstName, lastName, email);
+
+  // }
+  async submitApplication(firstname: String, lastname: String, email: String) {
+    try {
+        // URL API untuk menginsert data aplikasi ke MongoDB
+        const apiURL = "http://localhost:3000/register"; // Ganti dengan URL API yang sesuai
+
+        // Menggunakan fetch untuk memanggil API dengan metode POST
+        const response = await fetch(apiURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json', // Mengatur tipe konten ke JSON
+            },
+            body: JSON.stringify({firstname, lastname, email}), // Mengubah data aplikasi menjadi string JSON
+        });
+
+        // Mengecek apakah respons sukses
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        // Menangani respons dari API
+        const result = await response.json();
+        console.log("Application submitted successfully:", result);
+
+        // Mengembalikan hasil jika diperlukan
+        return result;
+    } catch (error) {
+        // Menangani error jika terjadi kegagalan dalam proses
+        console.error("Failed to submit application:", error);
+        throw error;
+    }
 
   }
 }

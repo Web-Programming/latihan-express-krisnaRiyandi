@@ -1,4 +1,4 @@
-const Apply = require("../models/apply")
+const Apply = require("../models/apply");
 
 const insert = (req, res, next) => {
     const apply = new Apply({
@@ -22,9 +22,22 @@ const insert = (req, res, next) => {
             const responseMessage = {
                 code: 400,
                 success: false,
-                message: "Bad request"
+                message: "Bad request",
+                data : e
             };
             res.status(400).json(responseMessage);
         });
 };
-module.exports= {insert}
+const Index = async (req, res) => {
+    try{
+        const apply = await Apply.find({});
+        res.status(200).json(apply);
+        if(!housing){
+            res.status(404).json({ message: "Collection is Empty"});
+        }
+    }catch (erorr) {
+        res.status(500).json({ message: "Error retrieving users", erorr});
+    }
+    
+};
+module.exports= {insert, Index}

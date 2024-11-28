@@ -1,0 +1,98 @@
+[{
+  "_id": {
+    "$oid": "673e0c8f9ca7e12fb3e35185"
+  },
+  "name": "Citra Grand City",
+  "city": "Palembang",
+  "state": "Sumatera Selatan",
+  "photo": "https://i.ytimg.com/vi/nyFaGh4aFbY/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGIgYihiMA8=&rs=AOn4CLDjCxoSz-d6JGFwRCuYN11dt9RZwQ",
+  "availableUnit": 12,
+  "wifi": true,
+  "laundry": true,
+  "id": 0
+},
+{
+  "_id": {
+    "$oid": "673e0c8f9ca7e12fb3e35186"
+  },
+  "name": "Citra Land",
+  "city": "Palembang",
+  "state": "Sumatera Selatan",
+  "photo": "https://awsimages.detik.net.id/community/media/visual/2023/07/13/rumah-murahdok-sikumbang-kementerian-pupr-4_169.jpeg?w=600&q=90",
+  "availableUnit": 12,
+  "wifi": true,
+  "laundry": true,
+  "id": 1
+},
+{
+  "_id": {
+    "$oid": "673e0c8f9ca7e12fb3e35187"
+  },
+  "name": "Pesona Residence",
+  "city": "Palembang",
+  "state": "Sumsel",
+  "photo": "https://awsimages.detik.net.id/community/media/visual/2023/12/15/perumahan-di-gunung-sindurdok-istimewa_43.jpeg?w=600&q=90",
+  "wifi": true,
+  "laundry": true,
+  "id": 2
+},
+{
+  "_id": {
+    "$oid": "673e0c8f9ca7e12fb3e35188"
+  },
+  "name": "Perumahan Tanah Mas",
+  "city": "Prabumulih",
+  "state": "Sumatera Selatan",
+  "photo": "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/28/2023/09/26/IMG_4270-2734807404.jpeg",
+  "wifi": true,
+  "laundry": true,
+  "id": 3
+},
+{
+  "_id": {
+    "$oid": "673e0c8f9ca7e12fb3e35189"
+  },
+  "name": "Griya Duta Mas",
+  "city": "Palembang",
+  "state": "Sumatera Selatan",
+  "photo": "https://www.99.co/id/panduan/wp-content/uploads/2022/11/perumahan-di-depok.png",
+  "wifi": true,
+  "laundry": true,
+  "id": 4
+},
+{
+  "_id": {
+    "$oid": "673e0c8f9ca7e12fb3e35190"
+  },
+  "name": "Cluster Cendana",
+  "city": "Palembang",
+  "state": "Sumatera Selatan",
+  "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsreOdj_mCRLPJIPWBRvEMNbdUfzLGVWlIWA&s",
+  "wifi": true,
+  "laundry": true,
+  "id": 5
+},
+{
+  "_id": {
+    "$oid": "673e0c8f9ca7e12fb3e35191"
+  },
+  "name": "Perumahan Kenten Permai",
+  "city": "Palembang",
+  "state": "Sumatera Selatan",
+  "photo": "https://dev.microsites.99iddev.net/app/uploads/sites/502/2022/01/Penampakan-unit-rumah-di-perumahan-murah-di-Bekasi-Mustika-Village-Sukamulya.jpg",
+  "wifi": true,
+  "laundry": true,
+  "id": 6
+},
+{
+  "_id": {
+    "$oid": "673e0c8f9ca7e12fb3e35192"
+  },
+  "name": "Perumahan Floresta Garden",
+  "city": "Palembang",
+  "state": "Sumatera Selatan",
+  "photo": "https://www.haloblitar.com/wp-content/uploads/2024/01/perumahan-di-Tangerang-Selatan.jpg",
+  "wifi": true,
+  "laundry": true,
+  "id": 7
+}]

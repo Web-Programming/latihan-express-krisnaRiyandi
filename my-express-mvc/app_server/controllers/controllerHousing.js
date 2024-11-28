@@ -15,19 +15,6 @@ const Index = async (req, res) => {
     
 };
 
-// Mengambil housing berdasarkan ID
-// const getHousingById = async (req, res) => {
-//   try {
-//     const housing = await Housing.findById(req.params.id);
-//     if (!housing) {
-//       return res.status(404).json({ message: 'Housing tidak ditemukan' });
-//     }
-//     res.json(housing);
-//   } catch (error) {
-//     res.status(500).json({ message: 'Terjadi kesalahan saat mengambil data housing' });
-//   }
-// };
-
 const IndexById = async (req, res) => {
   try {
       const id = parseInt(req.params.id); // Ambil ID dari parameter URL
